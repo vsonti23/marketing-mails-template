@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Email Exercise</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module">
+        import Handlebars from "https://cdn.jsdelivr.net/npm/handlebars@4.7.8/+esm";
+
+        Handlebars.registerHelper("calculateAge", function (birthDate) {
+            var today = new Date();
+            var birthDate = new Date(birthDate);
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        });
+
+        Handlebars.registerHelper("lt", function (a, b) {
+            return a < b;
+        });
+
+        Handlebars.registerHelper("glte", function (a, b, c) {
+            return a >= b && a <= c;
+        });
+
+        document.body.innerHTML = Handlebars.compile(template.innerHTML)(
+            JSON.parse(data.innerHTML)
+        );
+    </script>
+
+    <script type="application/json" id="data">
+            {
+                "birthDate": "Mon, 23 Oct 1988 19:07:56 GMT"
+            }
+        </script>
+</head>
+
+<body>
+    <template id="template">
+        <div class="header-logo">
+            <a href="https://www.fetch.com">
+                <img src="images/Fetch_Logo_Secondary_Horizontal.png" alt="Fetch Logo" />
+            </a>
+        </div>
+        <a href="https://www.fetch.com">
+            <picture class="headline">
+                <source media="(max-width: 850px)" srcset="images/MOBILE_HDR_1.png">
+                <img src="images/DESKTOP_HDR_1.png" alt="Desktop Cover Image">
+            </picture>
+        </a>
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet, consectetur adpiscing elit. Etiam gravida dui urna, quis fermentum orci
+                pellentesque at.</p>
+        </div>
+        <div class="full-width-module">
+            <a href="https://www.fetch.com">
+                <image src="images/Fullwidth snippet_1.png" alt="Full Width Icon">
+            </a>
+        </div>
+        <div class="half-width-module">
+            <a href="https://www.fetch.com">
+                <img src="images/1_1.png" alt="Half Width Icon" />
+            </a>
+            <p>Vestibulum nec tempus magna. Cras vel ligula sodales, finibus nisi id, pulvinar felis. Nulla luctus
+                pretium pretium. Praesent tincidunt bibendum velit eu lacina</p>
+        </div>
+        <div class="half-width-module">
+            <p style="padding-left: 0%;">Vestibulum nec tempus magna. Cras vel ligula sodales, finibus nisi id,
+                pulvinar felis. Nulla luctus
+                pretium pretium. Praesent tincidunt bibendum velit eu lacina</p>
+            <a href="https://www.fetch.com">
+                <img src="images/1_1.png" alt="Half Width Icon" />
+            </a>
+        </div>
+        <div class="half-width-module">
+            <a href="https://www.fetch.com">
+                <img src="images/1_1.png" alt="Half Width Icon" />
+            </a>
+            <p>Vestibulum nec tempus magna. Cras vel ligula sodales, finibus nisi id, pulvinar felis. Nulla luctus
+                pretium pretium. Praesent tincidunt bibendum velit eu lacina</p>
+        </div>
+        {{#if birthDate}}
+        {{#with (calculateAge birthDate)}}
+        {{#if (lt this 35)}}
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_TIKTOK_MOBILE.ENG (2).png"
+                    alt="TikTok">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_INSTAGRAM_MOBILE.ENG (1)_1.png"
+                    alt="Instagram">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_X_MOBILE.ENG_1.png" alt="X">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_FACEBOOK_MOBILE.ENG (1).png"
+                    alt="Facebook">
+            </a>
+        </div>
+        {{else if (glte this 35 55)}}
+        \ <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_INSTAGRAM_MOBILE.ENG (1)_1.png"
+                    alt="Instagram">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_X_MOBILE.ENG_1.png" alt="X">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_TIKTOK_MOBILE.ENG (2).png"
+                    alt="TikTok">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_FACEBOOK_MOBILE.ENG (1).png"
+                    alt="Facebook">
+            </a>
+        </div>
+        {{else}}
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_FACEBOOK_MOBILE.ENG (1).png"
+                    alt="Facebook">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_X_MOBILE.ENG_1.png" alt="X">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_INSTAGRAM_MOBILE.ENG (1)_1.png"
+                    alt="Instagram">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.fetch.com">
+                <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_TIKTOK_MOBILE.ENG (2).png"
+                    alt="TikTok">
+            </a>
+        </div>
+        {{/if}}
+        {{/with}}
+        {{/if}}
+
+
+        <div class="footer">
+            <a href="https://www.fetch.com">
+                <img src="images/Fetch_Logo_Primary_Stacked.png">
+            </a>
+            <p>© 2021 Fetch Rewards, Inc. All rights reserved.</p>
+            <p style="font-style: normal;">
+                <span>1050 E. Washington Ave</span>. 2nd FI, Madison, WI 53703
+            </p>
+        </div>
+        <!-- <h1>{{ birthDate }}</h1> -->
+    </template>
+</body>
+
+</html>
