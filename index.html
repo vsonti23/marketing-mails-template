@@ -34,23 +34,23 @@
     </script>
 
     <script type="application/json" id="data">
-            {
-                "birthDate": "Mon, 23 Oct 1988 19:07:56 GMT"
-            }
-        </script>
+        {
+            "birthDate": "Mon, 23 Oct 1988 19:07:56 GMT"
+        }
+    </script>
 </head>
 
 <body>
     <template id="template">
         <div class="header-logo">
-            <a href="https://www.fetch.com">
-                <img src="images/Fetch_Logo_Secondary_Horizontal.png" alt="Fetch Logo" />
+            <a href="https://www.fetch.com" alt="Link to Fetch">
+                <img src="images/Fetch_Logo_Secondary_Horizontal.png" alt="Fetch Header Logo" />
             </a>
         </div>
-        <a href="https://www.fetch.com">
-            <picture class="headline">
+        <a href="https://www.fetch.com" alt="Link to Fetch">
+            <picture class="headline" alt="Cover Image">
                 <source media="(max-width: 850px)" srcset="images/MOBILE_HDR_1.png">
-                <img src="images/DESKTOP_HDR_1.png" alt="Desktop Cover Image">
+                <img src="images/DESKTOP_HDR_1.png">
             </picture>
         </a>
         <div class="description">
@@ -58,27 +58,26 @@
                 pellentesque at.</p>
         </div>
         <div class="full-width-module">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/Fullwidth snippet_1.png" alt="Full Width Icon">
             </a>
         </div>
         <div class="half-width-module">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <img src="images/1_1.png" alt="Half Width Icon" />
             </a>
             <p>Vestibulum nec tempus magna. Cras vel ligula sodales, finibus nisi id, pulvinar felis. Nulla luctus
                 pretium pretium. Praesent tincidunt bibendum velit eu lacina</p>
         </div>
         <div class="half-width-module">
-            <p style="padding-left: 0%;">Vestibulum nec tempus magna. Cras vel ligula sodales, finibus nisi id,
-                pulvinar felis. Nulla luctus
-                pretium pretium. Praesent tincidunt bibendum velit eu lacina</p>
-            <a href="https://www.fetch.com">
+            <p id="right-half-module-p">Vestibulum vel orci vel orci ultricies malesuada. Phasellus rutrum lacus vel mi
+                cursus aliquet sed vel turpis. Donec ornare pharetra est in egestas.</p>
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <img src="images/1_1.png" alt="Half Width Icon" />
             </a>
         </div>
         <div class="half-width-module">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <img src="images/1_1.png" alt="Half Width Icon" />
             </a>
             <p>Vestibulum nec tempus magna. Cras vel ligula sodales, finibus nisi id, pulvinar felis. Nulla luctus
@@ -88,72 +87,72 @@
         {{#with (calculateAge birthDate)}}
         {{#if (lt this 35)}}
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_TIKTOK_MOBILE.ENG (2).png"
                     alt="TikTok">
             </a>
         </div>
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_INSTAGRAM_MOBILE.ENG (1)_1.png"
                     alt="Instagram">
             </a>
         </div>
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_X_MOBILE.ENG_1.png" alt="X">
             </a>
         </div>
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_FACEBOOK_MOBILE.ENG (1).png"
                     alt="Facebook">
             </a>
         </div>
         {{else if (glte this 35 55)}}
         \ <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_INSTAGRAM_MOBILE.ENG (1)_1.png"
                     alt="Instagram">
             </a>
         </div>
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_X_MOBILE.ENG_1.png" alt="X">
             </a>
         </div>
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_TIKTOK_MOBILE.ENG (2).png"
                     alt="TikTok">
             </a>
         </div>
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_FACEBOOK_MOBILE.ENG (1).png"
                     alt="Facebook">
             </a>
         </div>
         {{else}}
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_FACEBOOK_MOBILE.ENG (1).png"
                     alt="Facebook">
             </a>
         </div>
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_X_MOBILE.ENG_1.png" alt="X">
             </a>
         </div>
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_INSTAGRAM_MOBILE.ENG (1)_1.png"
                     alt="Instagram">
             </a>
         </div>
         <div class="social-media">
-            <a href="https://www.fetch.com">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
                 <image src="images/DSN2-6828   Social Invite Email Refresh_MODULE_TIKTOK_MOBILE.ENG (2).png"
                     alt="TikTok">
             </a>
@@ -161,18 +160,15 @@
         {{/if}}
         {{/with}}
         {{/if}}
-
-
         <div class="footer">
-            <a href="https://www.fetch.com">
-                <img src="images/Fetch_Logo_Primary_Stacked.png">
+            <a href="https://www.fetch.com" alt="Link to Fetch">
+                <img src="images/Fetch_Logo_Primary_Stacked.png" alt="Fetch Footer Logo">
             </a>
             <p>© 2021 Fetch Rewards, Inc. All rights reserved.</p>
-            <p style="font-style: normal;">
+            <p id="footer-addr">
                 <span>1050 E. Washington Ave</span>. 2nd FI, Madison, WI 53703
             </p>
         </div>
-        <!-- <h1>{{ birthDate }}</h1> -->
     </template>
 </body>
 

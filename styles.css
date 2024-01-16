@@ -3,16 +3,12 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
 }
 
 
 .header-logo {
     width: 100%;
     height: 100%;
-    background: white;
-    display: flex;
-    align-items: left;
 }
 
 .header-logo img {
@@ -40,7 +36,6 @@ body {
     height: 100%;
     margin-top: 2%;
     margin-bottom: 2%;
-    background: white;
 }
 
 .description p {
@@ -56,7 +51,6 @@ body {
 .full-width-module {
     width: 100%;
     height: 100%;
-    background: white;
 }
 
 .full-width-module img {
@@ -71,7 +65,6 @@ body {
     height: 100%;
     margin: auto;
     margin-top: 2%;
-    background: white;
     display: flex;
 }
 
@@ -94,10 +87,13 @@ body {
     color: #000;
 }
 
+#right-half-module-p {
+    padding-left: 0%;
+}
+
 .social-media {
     width: 100%;
     height: 100%;
-    background: white;
 }
 
 .social-media img {
@@ -142,6 +138,10 @@ body {
 
 .footer span {
     color: #3166d0;
+}
+
+#footer-addr {
+    font-style: normal;
 }
 
 @media (max-width: 850px) {
